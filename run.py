@@ -1,4 +1,10 @@
-from code import GoogleSearch
-texts = GoogleSearch.run("Linear_regression", 3)
+from code import GoogleSearch, QAModel
 
-print(texts[0])
+question = "who is donald trump?"
+num_results = 3
+
+texts = GoogleSearch.run(question, num_results)
+answers = QAModel.predict(question, texts)
+for answer in answers:
+    print(answer)
+    print("==="*10)

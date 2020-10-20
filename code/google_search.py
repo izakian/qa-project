@@ -30,7 +30,7 @@ class GoogleSearch:
         for url in urls:
             html = urllib.request.urlopen(url).read()
             text = BeautifulSoup(html).text.replace("\n", ".")
-            texts.append(text)
+            texts.append(text[0:512])
         return texts
 
     @classmethod

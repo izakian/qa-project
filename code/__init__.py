@@ -1,2 +1,2 @@
-from .google_search import GoogleSearch
+from .wiki_search import WikiSearch
 from .model import QAModel

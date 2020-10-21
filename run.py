@@ -1,9 +1,8 @@
-from code import GoogleSearch, QAModel
+from code import WikiSearch, QAModel
 
-question = "who is donald trump?"
-num_results = 3
+question = "who is barak obama?"
 
-texts = GoogleSearch.run(question, num_results)
+texts = WikiSearch.run(question)
 answers = QAModel.predict(question, texts)
 for answer in answers:
     print(answer)

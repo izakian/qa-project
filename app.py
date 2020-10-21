@@ -1,9 +1,20 @@
+from flask import Flask, jsonify
 from code import WikiSearch, QAModel
 
-question = "who is barak obama?"
+app = Flask(__name__)
 
-texts = WikiSearch.search(question)
-answers = QAModel.predict(question, texts)
-for answer in answers:
-    print(answer)
-    print("==="*10)
+@app.route('/')
+def health_ckeck():
+    return "Ok!"
+
+@app.route('/<question>')
+def hello_name(question):
+    texts = WikiSearch.search(question)
+    answers = QAModel.predict(question, texts)
+    d = {}
+    for i in range(len(answers)):
+        d[i] = answers[i]
+    return jsonify(d)
+
+if __name__ == '__main__':
+    app.run()

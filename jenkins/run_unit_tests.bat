@@ -1,0 +1,1 @@
+nosetests qa_model

@@ -1,0 +1,1 @@
+pylint qa_model/ --fail-under=5 

@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from code import WikiSearch, QAModel
+from qa_model import WikiSearch, QAModel
 
 app = Flask(__name__)
 

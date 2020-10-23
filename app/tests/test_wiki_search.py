@@ -1,5 +1,5 @@
 import unittest
-from qa_model.wiki_search import WikiSearch
+from app.wiki_search import WikiSearch
 
 class TestWikiSearch(unittest.TestCase):
 

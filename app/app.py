@@ -11,7 +11,7 @@ def health_ckeck():
     return "Ok!"
 
 @app.route('/<question>')
-def hello_name(question):
+def questions_answering(question):
     texts = WikiSearch.search(question)
     answers = QAModel.predict(question, texts)
     d = {}
@@ -20,4 +20,4 @@ def hello_name(question):
     return jsonify(d)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')

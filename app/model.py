@@ -3,8 +3,8 @@ import torch
 
 class QAModel:
 
-    TOKENIZER = AutoTokenizer.from_pretrained("bert-large-uncased-whole-word-masking-finetuned-squad")
-    MODEL= AutoModelForQuestionAnswering.from_pretrained("bert-large-uncased-whole-word-masking-finetuned-squad")
+    TOKENIZER = AutoTokenizer.from_pretrained("deepset/roberta-base-squad2")
+    MODEL= AutoModelForQuestionAnswering.from_pretrained("deepset/roberta-base-squad2")
 
     @classmethod
     def predict(cls, question, texts):

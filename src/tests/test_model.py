@@ -1,5 +1,5 @@
 import unittest
-from app.model import QAModel
+from src.model import QAModel
 
 class TestQAModel(unittest.TestCase):
 

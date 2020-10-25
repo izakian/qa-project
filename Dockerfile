@@ -22,7 +22,7 @@ ADD . /app
 EXPOSE 5000
 
 # for simple testing- for production comment this
-ENTRYPOINT ["python", "app/app.py"]
+ENTRYPOINT ["python", "src/app.py"]
 
 # for real production using gunicorn- comment it if doing it for testing only
 # ENTRYPOINT ["gunicorn", "--config", "gunicorn_config.py", "app.wsgi:app"]

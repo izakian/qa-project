@@ -1,1 +1,1 @@
-nosetests app
+nosetests src

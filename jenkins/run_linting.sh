@@ -1,1 +1,1 @@
-pylint app/ --fail-under=5 
+pylint src/ --fail-under=5 

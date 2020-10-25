@@ -1,5 +1,5 @@
 import unittest
-from app.wiki_search import WikiSearch
+from src.wiki_search import WikiSearch
 
 class TestWikiSearch(unittest.TestCase):
 

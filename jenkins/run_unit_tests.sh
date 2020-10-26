@@ -1,1 +1,1 @@
-nosetests src
+nosetests src/

@@ -11,12 +11,8 @@ pipeline {
         parallel{
             failFast: true,
             "unittesting": {
-                withEnv(["PYTHONPATH=:${env.WORKSPACE}/batchjob/"]){
                     sh 'bash -x -e jenkins/run_unit_tests.sh'
-
-                }
-                  
-            }       
+            }
             "linting": {
                     sh 'bash -x -e jenkins/run_linting.sh'
             }

@@ -11,7 +11,7 @@ pipeline {
         parallel{
             failFast: true,
             "unittesting": {
-                    sh 'bash -x -e jenkins/run_unit_tests.sh'
+                    sh 'nosetests src/'
             }
             "linting": {
                     sh 'bash -x -e jenkins/run_linting.sh'

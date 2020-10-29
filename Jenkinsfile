@@ -9,7 +9,6 @@ pipeline {
     stage('unittest and linting')
     {
         parallel{
-            failFast: true,
             "unittesting": {
                     sh 'bash -x -e jenkins/run_unit_tests.sh'
             }

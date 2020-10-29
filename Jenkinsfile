@@ -8,7 +8,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'bash run_unit_tests.sh'
+        sh 'bash jenkins/run_unit_tests.sh'
       }    
     }
   }

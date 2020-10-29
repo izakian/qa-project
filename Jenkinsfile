@@ -3,13 +3,15 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        echo "*************************"
         sh 'pip install -r requirements.txt'
       }
     }
     stage('test') {
       steps {
-        sh 'bash jenkins/run_unit_tests.sh'
-      }    
+        echo "*************************"
+      }   
     }
   }
 }
+JENKINSFILE

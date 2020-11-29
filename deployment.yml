@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: qa-project-service2
+spec:
+  selector:
+    app: qa-project
+  ports:
+  - protocol: "TCP"
+    port: 8081
+    targetPort: 8080
+    nodePort: 30002
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qa-project
+spec:
+  selector:
+    matchLabels:
+      app: qa-project
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: qa-project
+    spec:
+      containers:
+      - name: qa-project
+        image: qa:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
